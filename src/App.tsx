@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "todomvc-app-css/index.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="todoapp">
+      <header className="header">
+        <h1>todos</h1>
+        <input
+          className="new-todo"
+          placeholder="What needs to be done?"
+          value=""
+          data-reactid=".0.0.1"
+        ></input>
       </header>
+      <section className="main">
+        <input id="toggle-all" className="toggle-all" type="checkbox" />
+        <label htmlFor="toggle-all"></label>
+      </section>
+      <footer className="footer"></footer>
     </div>
   );
 }
